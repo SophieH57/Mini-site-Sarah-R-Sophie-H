@@ -28,6 +28,8 @@ function requeteTitre() {
         alert("Echec de la requête. Infos:" + JSON.stringify(error));
       });
   });
+  document.getElementById("reponse-lego").textContent = "";
+  document.getElementById("reponse-guitare").textContent = "";
 }
 
 function requeteLego() {
@@ -58,4 +60,36 @@ function requeteLego() {
         alert("Echec de la requête. Infos:" + JSON.stringify(error));
       });
   });
+  document.getElementById("reponse-film").textContent = "";
+  document.getElementById("reponse-guitare").textContent = "";
+}
+
+function requeteGuitare() {
+  $(document).ready(function () {
+    $.ajax({
+      url: "http://www.songsterr.com/a/ra/songs.json?pattern=Clapton",
+      method: "GET",
+      dataType: "json",
+    })
+      .done(function (response) {
+        console.log(response);
+        let artiste = document.createElement("h1");
+        artiste.textContent = response[0]["artist"]["name"];
+        document.getElementById("reponse-guitare").appendChild(artiste);
+
+        for (i = 0; i < response.length; i++) {
+          let chanson = document.createElement("p");
+
+          let titreChanson = document.createElement("li");
+          titreChanson.textContent = response[i]["title"];
+          chanson.appendChild(titreChanson);
+          document.getElementById("reponse-guitare").appendChild(chanson);
+        }
+      })
+      .fail(function (error) {
+        alert("Echec de la requête. Infos:" + JSON.stringify(error));
+      });
+  });
+  document.getElementById("reponse-film").textContent = "";
+  document.getElementById("reponse-lego").textContent = "";
 }
