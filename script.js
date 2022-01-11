@@ -1,4 +1,5 @@
 function requeteTitre() {
+  document.getElementById("reponse-film").textContent = "";
   $(document).ready(function () {
     $.ajax({
       url: "https://apimovies.fr/api/movies/search?search=star wars",
@@ -8,7 +9,7 @@ function requeteTitre() {
       .done(function (response) {
         let data = response.data;
         console.log(data);
-        for (i = 0; i < data.length; i++) {
+        for (i = 7; i <= 12; i++) {
           console.log(data[i]);
           let film = document.createElement("p");
 
@@ -33,6 +34,7 @@ function requeteTitre() {
 }
 
 function requeteLego() {
+  document.getElementById("reponse-lego").textContent = "";
   $(document).ready(function () {
     $.ajax({
       url: "https://rebrickable.com/api/v3/lego/sets/?key=b5bb4272b434c0784685233e2c07595b",
@@ -65,6 +67,7 @@ function requeteLego() {
 }
 
 function requeteGuitare() {
+  document.getElementById("reponse-guitare").textContent = "";
   $(document).ready(function () {
     $.ajax({
       url: "http://www.songsterr.com/a/ra/songs.json?pattern=Clapton",

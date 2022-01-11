@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" media="all" type="text/css"/>
     
-    <title>Test requête Ajax</title>
+    <title>Mini-site Sarah & Sophie</title>
 </head>
 <body>
-    <div class="bouton" onclick="requeteTitre()">Films</div>
-    <div class="bouton" onclick="requeteLego()">Lego</div>
-    <div class="bouton" onclick="requeteGuitare()">Guitare</div>
+    <div id="carrousel"></div>
+    <div id="menu">
+        <div class="bouton" onclick="requeteTitre()">Films</div>
+        <div class="bouton" onclick="requeteLego()">Lego</div>
+        <div class="bouton" onclick="requeteGuitare()">Guitare</div>
+    </div>
 
-    <div id="reponse-film"></div>
-    <div id="reponse-lego"></div>
-    <div id="reponse-guitare"></div>
+    <div class="corps" id="reponse-film"></div>
+    <div class="corps" id="reponse-lego"></div>
+    <div class="corps" id="reponse-guitare"></div>
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -1,10 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
-#bouton {
+#carrousel {
+  height: 50px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.bouton {
   border: solid 2px green;
   width: 100px;
   height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    color: green;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.corps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40%;
+}
+
+img {
+  justify-self: center;
+  margin-bottom: 50px;
+}
+
+#reponse-guitare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
