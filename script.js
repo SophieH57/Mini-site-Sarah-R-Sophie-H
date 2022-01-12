@@ -27,10 +27,10 @@ function requeteTitre() {
       })
         .done(function (response) {
           let data = response.data;
-          console.log(data);
           for (i = 7; i <= 12; i++) {
             console.log(data[i]);
             let film = document.createElement("p");
+            $("div#reponse-film").css({"background-image":"url('bobine.jpg')","background-position":"center","height":"600px"});
 
             let titreFilm = document.createElement("h1");
             titreFilm.textContent = data[i]["title"];
@@ -81,9 +81,9 @@ function requeteLego() {
       })
         .done(function (response) {
           let data = response.results;
-          console.log(response);
 
           let lego = document.createElement("p");
+          $("div#reponse-lego").css({"background-image":"url('lego.jpg')","height":"600px"});
 
           let titreLego = document.createElement("h1");
           titreLego.textContent = data[58]["name"];
@@ -130,12 +130,12 @@ function requeteGuitare() {
         dataType: "json",
       })
         .done(function (response) {
-          console.log(response);
           let artiste = document.createElement("h1");
           artiste.textContent = response[0]["artist"]["name"];
           document.getElementById("reponse-guitare").appendChild(artiste);
+          $("div#reponse-guitare").css({"background-image":"url('guitare.png')","background-height":"600px","height":"600px","background-max-height":"600px"});
 
-          for (i = 0; i < response.length; i++) {
+          for (i = 0; i < 10; i++) {
             let chanson = document.createElement("p");
 
             let titreChanson = document.createElement("li");
