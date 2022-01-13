@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" media="all" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Mini-site Sarah & Sophie</title>
+</head>
+
+<body>
+    <div id="carousel">
+        <div class="images">
+            <div class="image">
+                <img id="1" src="img/lego_1.jpg" alt="Vaisseau Star Wars">
+            </div>
+            <div class="image">
+                <img id="2" src="img/lego_2.jpg" alt="Guitare Fender Stratocaster">
+            </div>
+            <div class="image">
+                <img id="3" src="img/lego_3.jpg" alt="Edwige, chouette Harry Potter">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="buttons">
+        <button class="starWars" onclick="requeteTitre()">StarWars</button>
+        <button class="fender" onclick="requeteGuitare()">Fender Stratocaster</button>
+        <button class="harryPotter" onclick="requeteLego()">Harry Potter</button>
+    </div>
+
+
+    <div class="corps" id="reponse-film"></div>
+    <div class="corps" id="reponse-lego"></div>
+    <div class="corps" id="reponse-guitare"></div>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
